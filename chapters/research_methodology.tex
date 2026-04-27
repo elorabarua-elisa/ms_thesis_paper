@@ -1,0 +1,28 @@
+\chapter{Research Methodology}
+
+Building upon the market overview and certification requirements discussed in the previous chapters, this chapter present the technical methodology adopted to develop the Certification Tool. The tool is designed as a practical contribution to address the complexity of comparing FCR and aFRR prequalification requirements across European countries. The system is implemented as a containerised three-tier web application, consisting of an interactive Next.js frontend, a FastAPI backend and a PostgreSQL database, all orchestrated through Docker Compose. This chapter is divided into two major section to describe overall system architecture. First segment will demonstrate the architecture of web app including the frontend component design, the project structure explaining how each technical layer supports the research objective. In the second segment, the architecture demonstrate prequalification test setup and how technical requirements have significance in the whole system. 
+\section{Architecture of Certification Tool web app}
+The Certification Tool is designed as a component-driven, interactive web interface that translates complex certification requirements into a structured and user-friendly visualization environment.
+
+\subsection{User Interface Diagram}
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{ui_diagram.png}{%
+        \includegraphics[width=0.8\textwidth]{ui_diagram.png}%
+    }{%
+        \IfFileExists{images/ui_diagram.png}{%
+            \includegraphics[width=0.8\textwidth]{images/ui_diagram.png}
+        }{%
+            \fbox{\parbox{0.75\textwidth}{\centering
+            Image placeholder: add \texttt{ui\_diagram.png} either beside \texttt{main.tex} or inside an \texttt{images/} folder.}}
+        }%
+    }
+    \caption{Diagram of Certification Tool web app}
+    \label{fig:ui_diagram}
+\end{figure}
+
+This architecture is built on a modular design pattern and all UI elements are reusable and independent component. It assenbles the system more scalable and maintainable. This diagram shortly explain the overall structure of the web app, which indicate the connection between navigation, visual components.
+
+The first part of the application is navigation layer in header component, which is organized with name and navigation link of different pages. This section is considered as the primary access point for accessing two main functional areas of this application; Home page and Update Information page. The frontend is developed with most popular Next.js framework for smooth transition between views of routes without full page reloads. As a result, the used experience become more promising with clear distinction between analytical functionalities of Home page and data management functionalities of Update Information page. 
+
+The Home page represent main purpose of the application, which is consist with visual effects and comparison of certification requirements amoung various European countries. A responsive container holds the layout of the Certification Tool as structure to ensure consistent alignment across different screen resolutions. The UI is distinguished into two sections: a European map-based component on the left side and a dynamic information panel on the right side. Both sections are logically dependent because the map is dynamic and interactive, which determine the content of information panel in real time. This architecture is meant to provide a clear and quick overview of technical requireement of active market participants.

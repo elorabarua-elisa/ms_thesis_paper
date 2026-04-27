@@ -21,6 +21,7 @@
 \usepackage{placeins}
 \usepackage{pdflscape}
 \usepackage{enumitem}
+\usepackage{hyperref}
 \usetikzlibrary{positioning, matrix, fit, calc, shapes}
 \usepackage{amsmath}
 \pgfplotsset{compat=1.18}
@@ -29,10 +30,14 @@
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{0.95}
 
-\titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{}{0pt}{\Huge}
-\titlespacing*{\chapter}
-  {0pt}{10pt}{40pt}
+% --- Reduce the large blank space before chapter titles ---
+% Use a compact chapter style that leaves room for text/figures on the opening page.
+\titleformat{\chapter}[block]
+  {\normalfont\huge\bfseries}
+  {\thechapter}
+  {0.8em}
+  {}
+\titlespacing*{\chapter}{0pt}{-30pt}{10pt}
 
 \usepackage[%
 	bibstyle=ieee,
@@ -41,11 +46,12 @@
 	doi=false,
 	sorting=none,
 	url=true,
+	%defernumbers=true,
 	bibencoding=utf8,
 	backend=bibtex
 	]{biblatex} 
 
-\addbibresource{chapters/referenser.bib} % write your list of references into referenser.bib located in Chapters
+\bibliography{chapters/referenser} % write your list of references into referenser.bib located in Chapters
 
 % Table of contents
 \setcounter{secnumdepth}{5}
@@ -135,8 +141,8 @@ Information Technologies\\
 % Example of structure
 
 \input{chapters/introduction} 
-\input{chapters/market_overview} 
 \input{chapters/certification_requirement} 
+\input{chapters/research_methodology} 
 \input{chapters/result} 
 \input{chapters/conclusions}
 
