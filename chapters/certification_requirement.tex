@@ -1,0 +1,745 @@
+% Hide colored link boxes while keeping links clickable
+\hypersetup{hidelinks}
+
+\chapter{Certification Requirement}
+
+\section{Significant Criteria}
+This chapter describes major criteria across European countries for two popular ancillary services: \textit{FCR} and \textit{aFRR}. These parameters are either predefined before tests or calculated during tests to demonstrate the strength required to take actions in the power system.
+
+The following table summarizes the significant criteria and indicates similarities and dissimilarities between countries.
+
+\begin{longtable}{|p{3cm}|p{12cm}|}
+    \caption{Major Criteria for Prequalification Test}\label{tab:criteria1}\\
+    \hline
+    \textbf{Criteria} & \textbf{Description} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \textbf{Criteria} & \textbf{Description} \\
+    \hline
+    \endhead
+
+    \hline
+    \endfoot
+
+    \hline
+    \endlastfoot
+
+    Activation Speed & This parameter defines the time taken for the system to respond to a frequency signal determined by a frequency meter. It has three phases to activate the reserve: \textit{Initial Activation Time}, \textit{Half Activation Time} and \textit{Full Activation Time}. This time limit indicates the maximum time allowed for the response, and if any one of these three phases fails to meet the time limit, the test will be considered unsuccessful. \\
+    \hline
+    Capacity & This parameter explain the minimum and maximum capability of the system to generate power when system lack frequency or consume power when system overgenerate and want to reduce excess power. It is measured in MW. For capacity market, this criteria indicate potential allocated power for future to be used as backup. \\
+    \hline
+    Delivery Duration & This parameter indicates how long the facility or system must continuously provide the ancillary service after activation. It is measured in hours or minutes and defines the minimum duration requirement for service delivery. \\
+    \hline
+    Non-LER & This is known as Non-Limited Energy Reservoir in the prequalification test that determine the availability of the system to provide reserve continuouslty for a certain amount of time without any intervention. It is measured in hours and interested participants need to clarify the longevity of their system since asset with limited energy is required a special consideration and testing rule to be qualified for market bid. \\
+    \hline
+    Meter Accuracy & Meter accuracy is the precision of the measurement of the frequency signal. It is measured in percentage and it indicates the maximum error allowed for the frequency meter to be qualified for market bid. \\
+    \hline
+    Error Margin & This parameter has two values: \textit{Min Error Margin} and \textit{Max Error Margin}. This value indicate the acceptable range for response around the target value. For up regulation, the maximum value is much flexible than minimum value and vise versa for down regulation. TSO provide flexibility in terms of error margin to incourage interested bidder with their available resources. \\
+    \hline
+    Sampling Time & Sampling time indicates the gap between two consecutive measurements of frequency signal. It is measured in Hz. This parameter is closely related to the frequency measurement; the higher the frequency, the shorter the samplign time required to capture one complete cycle of the signal. \\
+    \hline
+    Central Asset & Central asset is different from other criteria since it is not a technical parameter but rather a requirement for the location of the asset. There are two types of assets: \textit{Central Asset} and \textit{Local Asset}. Central asset is. Local asset means a frequency meter with a controller that can be located to the connection point of the transmission system. Controller will receive frequnency signal and send response to the asset to work accordingly. \\
+    \hline
+    Product Type & This criteria is mainly related to the regulation type or direction of response. There are some fixed categories for product type such as \textit{Symmetric} and \textit{Asymmetric Up regulation} and \textit{Asymetric Down regulation}. Symmetric product type means the bidders should be able to provide both up and down regulation at the same time as sine wave signal. In contrast, asymmetric product type are supplied by bidders for either up or down regulation. It bring a significant differences for the rules of prequalificaiton test since symmetric product type need to fillup requirement for both direactions together. \\
+\end{longtable}
+
+
+Though there are a set of test criteria enforced by TSO, all prerequisite are not be applied for both FCR and aFRR markets. FCR has more requiremnt than aFRR. The following table shows what FCR and aFRR markets support in terms of criteria for the prequalification test. Some criteria need minimum and maximum values to set thresholds for specific criteria.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Criteria} & \textbf{FCR} & \textbf{aFRR} \\
+        \hline
+        Activation Speed & Yes & Yes \\
+        \hline
+        Capacity & Yes & Yes \\
+        \hline   
+        Delivery Duration & Yes & Yes \\
+        \hline  
+        LER & Yes & Yes \\
+        \hline
+        Non-LER & Yes & Yes \\
+        \hline
+        Frequency Meter and Accuracy & Yes & N/A \\
+        \hline
+        Error Margin & Yes & Yes \\
+        \hline
+        Sampling Time & Yes & N/A \\
+        \hline
+        Central Asset & Yes & No \\
+        \hline  
+        Product Type & Yes & Yes \\
+        \hline 
+    \end{tabular}
+    \caption{Significant Criteria for FCR and aFRR across European countries}
+    \label{tab:criteria2}
+\end{table}
+
+This table indicates what information is required for each market to tackle realtime dynamic cases while balancing the frequency deviation. 
+
+
+
+\section{Importance of Certification}
+Certification is the main focus of this extended studies which provide a validation and authorization for a successful bidders. It referes to the mandatory prequalification tests and approval process that a reserve unit must undergo before it can participate in the market. Strategically, this process means:
+\begin{itemize}
+    \item \textbf{Mandatory Technical Verification:} A reserve unit must demonstrate through prequalification tests that its control behavior and performance meet specific technical requirements, such as activation speed, stability and endurance. Controlling a large system, which is both financial loss and damange prone, is a complex task.
+    \item \textbf{Prerequisite for Market Entry}: A Balancing Service Provider (BSP) can only offer capacity to the hourly or annual markets once TSO has formally approved the capacity based on the test results.
+    \item \textbf{Risk Mitigation:} Certification helps mitigate risks associated with non-performance or underperformance of reserve units, which can lead to penalties or financial losses for both the provider and the system operator.
+    \item \textbf{Encouraging Investment:} A clear certification process can encourage investment in reserve capacity by providing confidence to investors that their assets will be recognized and compensated for their contributions to grid stability.
+\end{itemize}
+
+
+
+
+
+\begin{landscape}
+
+    \section{Comparative Analysis of Certification Process}
+The discussion on certification process in three major zone in across Europe for through inspection. These zone are Northern Europe, Continental Europe Synchronize Area and Southern Europe. The initial similarities is visible in the type of ancillary services. Basically, Nordics shows more frequency control facilities over central and southern Europe. A brief discription and comparison over three different zones are given below:
+    \subsection{Zone 1: Nordic Synchronize Area}
+    All nordic countries such as Finland, Sweden, Norway and Eastern part of Denmark actively engage into electricity market business. This area is regulate highly by renewable energy, which make the production level unpredictable and cause rapid changes in frequency. As a result, this synchronize area introduce more ancillary services and extend market toward new bidders. The name of popular ancillary services are FFR, FCR-N, FCR-D up regulation, FCR-D down regulation, aFRR, mFRR. 
+    
+    In this section, the requirement of prequalification test is included only for Eastern Denmark, which is also known as DK2. However, the permission of providing ancillary services has a constraint in term of participants' role for Denmark. BSP can only access to ancillary service market with a limited energy supply, which means FFR and FCR-D. A fact table on technical requirement of prequalification test in FCR-D is attached for Eastern part of Denmark. 
+
+
+\tiny
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{longtable}{|p{1.5cm}|p{2.5cm}|p{2.5cm}|p{1.8cm}|p{2.5cm}|p{1.5cm}|p{4cm}|p{2.5cm}|p{2.5cm}|p{2cm}|}
+    
+\caption{Zone 1: Nordic Synchronize Area --- comparison of prequalification criteria}\label{tab:Nordic}\\
+
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Meter Accuracy} & \textbf{Error Margin} & \textbf{Frequency Meter} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER} & \textbf{Meter Accuracy} & \textbf{Error Margin} & \textbf{Frequency Meter} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endhead
+
+Eastern Denmark & 
+\textbf{5\% act.:} 2.5s \newline
+\textbf{86\% act.:} 7.5s \newline & 
+\textbf{Min:} 0.1 MW~\cite{energinet-market-requirements-dk2-fcrd} \newline
+\textbf{Max:} N/A & 
+20 min~\cite{energinet-market-requirements-dk2-fcrd} & 
+\textbf{Asym. (Up / Down):} 2h \newline
+\textbf{Asym. (Up \& Down):} 4h & 
+\textbf{Acc.:} > 10 mHz & 
+\textbf{Fast Ramp Test(Dynamic FCR-D): }
+\newline
+1. Under-delivery limit: 5\% 
+\newline
+2. Over-deliver limit: 20\%
+
+\vspace{0.2cm}
+\textbf{Ramp Static Test(Static FCR-D): }
+\newline
+1. Under-delivery limit: 5\% 
+\newline
+2. Over-deliver limit: 10\%
+
+\vspace{0.2cm}
+\textbf{Linearity Test(Steady State Response): }
+\newline
+Upward Regulation:  
+\newline 1. Under-delivery limit: -5\% 
+\newline 2. Over-deliver limit: +10\% 
+\vspace{0.09cm} \newline
+Downward Regulation: 
+\newline 1.Under-delivery limit: -10\%
+\newline 2. Over-deliver limit: +5\%
+&
+Both local frequency meter and central frequency meter are acceptable, though local frequency meter is recommanded for each unit to ensure higher security of delivery. For Denmark, central meter means multiple unit can use same frequency meter to create redundancy in case of power outages or equipment failure. 
+& 
+\textbf{Frequency: }1 per second
+\textbf{Power: }1 per second
+& \begin{minipage}[t]{\linewidth}
+\begin{itemize}[leftmargin=*, nosep]
+  \item Asymmetric Up
+  \item Asymmetric Down
+\end{itemize}
+\vspace{-0.5\baselineskip}\cite{energinet-market-requirements-dk2-fcrd}
+\end{minipage} \\
+\hline
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+
+
+
+
+
+
+\clearpage
+\begin{landscape}
+
+
+    \subsection{Zone 2: Continental Europe Synchronize Area}
+In this section, some of the central european countries named Belgium, Austria, Netherlands, Swizerland, Czechia, Germany and Baltics are comprised. These countries have remarkable business strategy, firmness in working process and opportunities for international traders which can bring a great collaboration among divergent market actors. Continental Europe have more control over electricity production, stablize frequency because the major portion of generation are from nuclear energy, fossil fuel. This indicates a system of high-inertia where imbalance in supply and demand can be mitigated without advanced control system. As a result, continental europe fortify frequency deviation and strength grid balance with less ancillary services and moderate market policy than northern part of europe. 
+
+Popular ancillary services regulate in electricity market sector are FCR, aFRR and mFRR. A data table on the FCR market in central europe is added below:
+
+\tiny
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{1.8cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.5cm}|p{1.5cm}|p{2.2cm}|p{4cm}|p{2.5cm}|p{2cm}|}
+\caption{Zone 2: Continental Europe Synchronize Area --- comparison of FCR prequalification criteria}\label{tab:continental_europe_fcr}\\
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Meter Accuracy} & \textbf{Error Margin} & \textbf{Frequency Meter} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Meter Accuracy} & \textbf{Error Margin} & \textbf{Frequency Meter} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endhead
+
+Belgium & 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Half Act.:} $\leq$ 15 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec \newline
+& 
+\textbf{Min: }1 MW 
+\newline \textbf{Max: }N/A
+& To be inserted & 2h & 
+\textbf{Acc.: }> 10mHz
+& 
+\textbf{Availability Test: }> 15%
+&
+1.Local frequency measurements are mandatory.That means each Delivery Point (i.e., each site participating in the Frequency Containment Reserve or FCR service) must have its own frequency measurement equipment installed on-site.  
+\newline \textbf{Exception: Virtual Delivery Points}
+\newline 2.1 For Virtual Delivery Points (which are aggregations of smaller assets treated as one point): 
+\newline 2.2 Only one frequency meter is required per Virtual Delivery Point. 
+\newline 2.3 However, if a Balancing Service Provider (BSP) operates multiple Virtual Delivery Points, then: 
+\newline        2.3.1 Each Virtual Delivery Point must have its own, separate frequency meter. 
+\newline        2.3.2 This is for redundancy, meaning to avoid single points of failure across multiple assets. 
+
+\textbf{Administrative Note:} If a BSP wants a Providing Group to be treated as a Virtual Delivery Point, they must notify ELIA before any prequalification tests are done. 
+& N/A & 
+\begin{itemize}[leftmargin=*, nosep]
+  \item Symmetric 100mHz
+  \item Symmetric 200mHz
+  \item Asymmetric Up
+  \item Asymmetric Down
+\end{itemize}\\
+\hline
+Austria & 
+\textbf{Half Act.:} $\leq 15\,\mathrm{s}$ \parencite[Sec.~3.1.10, p.~9]{apg_prr_pq_2014_formular}.
+
+\textbf{Full Act.:} $\leq 30\,\mathrm{s}$ \parencite[Sec.~3.1.10, p.~9]{apg_prr_pq_2014_formular}.
+
+& 
+\textbf{Min: }$\pm 1$ MW
+\newline \textbf{Max: }$\pm 25$ MW
+& 
+\textbf{Min: }30 min
+& 
+To be inserted 
+&
+\textbf{error} $\leq$ $\pm 5$ mHz 
+& 
+To be inserted 
+& 
+To be inserted 
+& 2 sec & to be inserted \\
+
+\hline
+Netherlands 
+& 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Half Act.:} $\leq$ 15 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec \newline
+& 
+\textbf{Min: }1 \newline
+\textbf{Max: }150 MW \newline
+\textbf{Unit size: }$\geq$ 0.1 MW \newline
+\textbf{Inc. size: }0.1 MW \newline
+
+
+All units in a group must have similar power.
+\newline Maximum size for indivisible bids = 25 MW.
+& To be inserted 
+& 
+\textbf{Asym. (Up/Down): } 2h
+\newline
+
+LER + non-LER =  4h (Consider full group as non-LER)
+& 
+\textbf{Acc.: }$\geq$ 10mHz 
+& 
+to be inserted
+&
+Each asset needs local frequency meter -> central controller can send signal only where intervention needed 
+& To be inserted & Symmetric \\
+\hline
+Switzerland 
+& 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Half Act.:} $\leq$ 15 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec \newline
+& 
+\textbf{Min: }1 MW
+& 
+To be inserted 
+& 
+To be inserted & 
+\textbf{Acc.: }> $\pm 10$mHz  
+& 
+To be inserted 
+& 
+There are 3 ways for frequency meter:
+\newline 1.Local frequency measurements at least per network connection point (if possible, per technical unit)
+\newline 2.Central controller with decentralized frequency measurements per connection point ( assume seperate control)
+\newline 3.Central controller with integrated frequency measurements of all technical unit( assume integrated control), but TSO choose best result( point 2, point 3)
+& 
+To be inserted &
+Up/Down \\
+\hline
+Czechia 
+& 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Half Act.:} $\leq$ 15 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec
+& 
+\textbf{Min: }1 MW
+\newline \textbf{Max: }25 MW
+& To be inserted
+&
+2h
+& 
+\textbf{Acc.: }$\geq$ 10mHz  
+\vspace{0.2cm}
+For backup frequency meter,
+\newline \textbf{Acc.: }$\geq$ 50mHz  
+& To be inserted 
+& 
+1. Units and ABs(aggregation blocks for backup) must be equipped with frequency measurement at each connection point.
+2. If one AB contains more than one connection point,
+centralized measurement can be used as the main measurement.
+3. If point 2 is true, then each connection point within the AB where the energy device is located must be
+equipped with backup measurement
+& To be inserted & 
+Up/Down \\
+\hline
+Germany 
+& 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec 
+& To be inserted & To be inserted & 2h & \textbf{Acc.: }10mHz & 
+10\% to 30\% depending on in which state the activation is in 
+& 
+One meter per “grid connection point” 
+& 
+4 sec 
+& 
+Symmetric $\pm 200$mHz \\
+\hline
+Baltics 
+&
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec
+&
+\textbf{Min: }1 MW
+& To be inserted 
+& 
+2h & 
+\textbf{Acc.: } $\pm 10$mHz
+& 
+$\pm 10$\%
+& 
+Local frequency meter mandatory.
+& 
+100 ms
+& Symmetric $\pm 200$mHz \\
+\hline
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+
+
+
+
+\clearpage
+\begin{landscape}
+
+    Another most popular market product in central europe is aFRR which is known as automatic frequency restoration reserve. Most of the countries has a decent similarities from the perspective of technical requirement. A data table on the aFRR market in central europe shows comparison in terms of different requirement below:
+
+
+\tiny
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{4cm}|p{2.5cm}|p{2.5cm}|}
+\caption{Zone 2: Continental Europe Synchronize Area --- comparison of aFRR prequalification criteria}\label{tab:continental_europe_afrr}\\
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Error Margin} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Error Margin} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endhead
+
+Belgium & 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Half Act.:} $\leq$ 15 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec \newline
+& 
+\textbf{Min: }1 MW 
+\newline \textbf{Max: }9999 MW
+& To be inserted & 
+\textbf{Asyn. (Up/Dowm): }4h 
+\newline SoC > 50% at start
+& 
+2 MW threshold over 10 seconds serves as the error margin used for compliance or deviation tracking
+& 1 sec & 
+\begin{itemize}[leftmargin=*, nosep]
+  \item Asymmetric Up
+  \item Asymmetric Down
+\end{itemize}\\
+\hline
+
+
+
+Austria & 
+\textbf{Reaction time:} 30 sec \newline
+\textbf{Full Act.:} 5 min \newline
+& 
+\textbf{Min: }$\pm 1$ MW
+\newline \textbf{Inc. size: }1 MW 
+& 
+to be inserted
+& 
+To be inserted 
+& 
+1. Under-delivery limit: 5\%
+\newline 2. Over-delivery limit: 10\%
+& 2 sec & to be inserted \\
+
+
+
+\hline
+Netherlands 
+& 
+\textbf{Initial Act.: }30 sec
+& 
+\textbf{Min: }1 MW
+& 
+TO be inserted
+& 
+N/A
+& 
+1. Under-delivery limit: 10\%
+2. Over-delivery limit: 20\%
+& 10 sec 
+&  \begin{itemize}[leftmargin=*, nosep]
+  \item Asymmetric Up
+  \item Asymmetric Down
+\end{itemize}\\
+
+
+
+
+\hline
+Switzerland 
+& 
+to be inserted
+& 
+\textbf{Min: }$\pm 5$ MW
+\newline \textbf{Max: }$\pm 100$ MW
+& 
+To be inserted 
+& 
+To be inserted & 
+2 condition on error margin under/over delivery limit:
+
+1. limit $\leq$ $\pm 5$\%, acceptable.
+
+2. limit > $\pm 5$\%, sum of all response over 5\% must be $\leq$ 1\% of total target power.
+& 
+1. 2 sec(recommend)
+\newline 
+2. 10 sec(acceptable) &
+\begin{itemize}[leftmargin=*, nosep]
+    \item Symmetric
+    \item Asymmetric Up
+    \item Asymmetric Down
+\end{itemize} 
+\\
+
+
+
+\hline
+Germany 
+& 
+\textbf{Initial Act.:} 30 sec \newline
+\textbf{Full Act.:} 5 min 
+& 
+\textbf{Min: }1 MW
+& To be inserted 
+& 4h & 
+5-10\% depending on location of activation
+& 
+4 sec 
+& 
+Up / Down \\
+
+
+\hline
+Baltics 
+&
+\textbf{Initial Act.:} 30 sec \newline
+\textbf{Full Act.:} 5 min 
+&
+\textbf{Min: }1 MW
+& To be inserted 
+& 
+2h & 
+$\pm 10$\%
+& 
+10 seconds on asset level
+& Up / Down  \\
+\hline
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+
+    
+%Zone 3
+
+
+
+\clearpage
+\begin{landscape}
+
+
+    \subsection{Zone 3: Southern Europe Synchronize Area}
+
+In this section, countries in southern part and neighbouring locations are included. There are very few TSO Continental Europe have more control over electricity production, stablize frequency because the major portion of generation are from nuclear energy, fossil fuel. This indicates a system of high-inertia where imbalance in supply and demand can be mitigated without advanced control system. As a result, continental europe fortify frequency deviation and strength grid balance with less ancillary services and moderate market policy than northern part of europe. 
+
+Popular ancillary services regulate in electricity market sector are FCR, aFRR and mFRR. A data table on the FCR market in central europe is added below:
+
+\tiny
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{1.8cm}|p{2.2cm}|p{2.2cm}|p{2.2cm}|p{2.5cm}|p{1.5cm}|p{2.2cm}|p{4cm}|p{2.5cm}|p{2cm}|}
+\caption{Zone 2: South European Synchronize Area --- comparison of FCR prequalification criteria}\label{tab:south_europe_fcr}\\
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Meter Accuracy} & \textbf{Error Margin} & \textbf{Frequency Meter} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Meter Accuracy} & \textbf{Error Margin} & \textbf{Frequency Meter} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endhead
+
+France & 
+\textbf{Initial Act.:} $\leq$ 2 sec \newline
+\textbf{Full Act.:} $\leq$ 30 sec \newline
+& 
+\textbf{Min: }1 MW 
+\newline \textbf{Max: }25 MW
+& 15 min & 2h & 
+\textbf{Acc.: }> 10mHz
+& 
+to be insert
+&
+Both local and centralised frequency measurement are allowed upon some condition:
+
+Local frequency measurement
+  1. Any Sites FCR capacity > 1 MW
+  2. If a site reacts directly and proportionally to frequency deviation (for aggregator)
+
+Centralised frequency measurement
+  1. at least one Site is not activated using its own local frequency measurement(for aggregator)
+
+Sites connected to the PDS (distribution grid)
+  1. If sites do not have local frequency measurement:
+        1: Once the total PFC capacity in a region exceeds 1.5 MW:
+        At least 3 frequency measurements are required
+        Located in 3 different departments
+        Measurement quality must be equivalent to control measurement
+& N/A & 
+\begin{itemize}[leftmargin=*, nosep]
+  \item Symmetric
+  \item Asymmetric
+\end{itemize}\\
+\hline
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+
+
+
+
+\clearpage
+\begin{landscape}
+
+    Another most popular market product in central europe is aFRR which is known as automatic frequency restoration reserve. Most of the countries has a decent similarities from the perspective of technical requirement. A data table on the aFRR market in central europe shows comparison in terms of different requirement below:
+
+
+\tiny
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{4cm}|p{2.5cm}|p{2.5cm}|}
+\caption{Zone 2: South European Synchronize Area --- comparison of aFRR prequalification criteria}\label{tab:south_europe_afrr}\\
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Error Margin} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Country} & \textbf{Activation Speed} & \textbf{Capacity} & \textbf{Delivery Duration} & \textbf{Non-LER Duration} & \textbf{Error Margin} & \textbf{Sampling Time} & \textbf{Product Type} \\
+\hline
+\endhead
+
+France & 
+\textbf{Initial Act.: }60 sec \newline
+\textbf{Full Act.: }5 min
+& 
+\textbf{Min: }1 MW 
+\newline \textbf{Max: }N/A
+& To be inserted & 
+to be inserted
+& 
+to be inserted
+&  & 
+\begin{itemize}[leftmargin=*, nosep]
+  \item Symmetric
+  \item Asymmetric Up
+  \item Asymmetric Down
+  \item Symmetric and Asymmetric
+\end{itemize}\\
+\hline
+
+
+
+Spain & 
+\textbf{Init time:} 20 sec \newline
+\textbf{Full Act.:} 15 min \newline
+& 
+& 
+& 
+& 
+& 2 sec & to be inserted \\
+
+
+
+\hline
+Netherlands 
+& 
+\textbf{Initial Act.: }30 sec
+& 
+\textbf{Min: }1 MW
+& 
+TO be inserted
+& 
+N/A
+& 
+1. Under-delivery limit: 10\%
+2. Over-delivery limit: 20\%
+& 10 sec 
+&  \begin{itemize}[leftmargin=*, nosep]
+  \item Asymmetric Up
+  \item Asymmetric Down
+\end{itemize}\\
+
+
+
+
+\hline
+Switzerland 
+& 
+to be inserted
+& 
+\textbf{Min: }$\pm 5$ MW
+\newline \textbf{Max: }$\pm 100$ MW
+& 
+To be inserted 
+& 
+To be inserted & 
+2 condition on error margin under/over delivery limit:
+
+1. limit $\leq$ $\pm 5$\%, acceptable.
+
+2. limit > $\pm 5$\%, sum of all response over 5\% must be $\leq$ 1\% of total target power.
+& 
+1. 2 sec(recommend)
+\newline 
+2. 10 sec(acceptable) &
+\begin{itemize}[leftmargin=*, nosep]
+    \item Symmetric
+    \item Asymmetric Up
+    \item Asymmetric Down
+\end{itemize} 
+\\
+
+
+
+\hline
+Germany 
+& 
+\textbf{Initial Act.:} 30 sec \newline
+\textbf{Full Act.:} 5 min 
+& 
+\textbf{Min: }1 MW
+& To be inserted 
+& 4h & 
+5-10\% depending on location of activation
+& 
+4 sec 
+& 
+Up / Down \\
+
+
+\hline
+Baltics 
+&
+\textbf{Initial Act.:} 30 sec \newline
+\textbf{Full Act.:} 5 min 
+&
+\textbf{Min: }1 MW
+& To be inserted 
+& 
+2h & 
+$\pm 10$\%
+& 
+10 seconds on asset level
+& Up / Down  \\
+\hline
+\end{longtable}
+\normalsize
+\end{landscape}
+
+
+
+
+
+
+\section{System Architecture}
+
+

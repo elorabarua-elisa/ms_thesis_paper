@@ -1,0 +1,78 @@
+\chapter{Market Requirement}
+
+\section{Significant Criteria}
+This chapter describes major criteria across European countries for two popular ancillary services: \textit{FCR} and \textit{aFRR}. These parameters are either predefined before tests or calculated during tests to demonstrate the strength required to take actions in the power system.
+
+The following table summarizes the significant criteria and indicates similarities and dissimilarities between countries.
+
+\keepXColumns
+\begin{ltablex}{\textwidth}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}X|}
+\caption{Major Criteria for Prequalification Test}\label{tab:criteria1}\\
+\hline
+\textbf{Criteria} & \textbf{Description} \\
+\hline
+\endfirsthead
+
+\hline
+\textbf{Criteria} & \textbf{Description} \\
+\hline
+\endhead
+
+\hline
+\multicolumn{2}{r}{\textit{Continued on next page}} \\
+\endfoot
+
+\hline
+\endlastfoot
+
+Activation Speed & This parameter defines the time taken for the system to respond to a frequency signal determined by a frequency meter. It has three phases to activate the reserve: \textit{Initial Activation Time}, \textit{Half Activation Time} and \textit{Full Activation Time}. This time limit indicates the maximum time allowed for the response, and if any one of these three phases fails to meet the time limit, the test will be considered unsuccessful. \\
+\hline
+Capacity & This parameter explains the minimum and maximum capability of the system to generate power when the system lacks frequency or consume power when the system overgenerates and wants to reduce excess power. It is measured in MW. For capacity market, this criterion indicates potential allocated power for future use as backup. \\
+\hline
+Non-LER & This is known as Non-Limited Energy Reservoir in the prequalification test that determines the availability of the system to provide reserve continuously for a certain amount of time without any intervention. It is measured in hours and interested participants need to clarify the longevity of their system since assets with limited energy require special consideration and testing rules to be qualified for market bid. \\
+\hline
+Meter Accuracy & Meter accuracy is the precision of the measurement of the frequency signal. It is measured in percentage and it indicates the maximum error allowed for the frequency meter to be qualified for market bid. \\
+\hline
+Error Margin & This parameter has two values: \textit{Min Error Margin} and \textit{Max Error Margin}. This value indicates the acceptable range for response around the target value. For up regulation, the maximum value is more flexible than the minimum value and vice versa for down regulation. TSO provides flexibility in terms of error margin to encourage interested bidders with their available resources. \\
+\hline
+Sampling Time & Sampling time indicates the gap between two consecutive measurements of frequency signal. It is measured in Hz. This parameter is closely related to the frequency measurement; the higher the frequency, the shorter the sampling time required to capture one complete cycle of the signal. \\
+\hline
+Central Asset & Central asset is different from other criteria since it is not a technical parameter but rather a requirement for the location of the asset. There are two types of assets: \textit{Central Asset} and \textit{Local Asset}. Local asset means a frequency meter with a controller that can be located at the connection point of the transmission system. The controller receives the frequency signal and sends response commands to the asset accordingly. \\
+\hline
+Product Type & This criterion is mainly related to the regulation type or direction of response. There are some fixed categories for product type such as symmetric, asymmetric up regulation and asymmetric down regulation. Symmetric product type means the bidders should be able to provide both up and down regulation at the same time as a sine-wave signal. In contrast, asymmetric product types are supplied by bidders for either up or down regulation. It creates significant differences in the rules of the prequalification test since a symmetric product type needs to fulfil requirements for both directions together. \\
+\hline
+\end{ltablex}
+
+Though there are a set of test criteria enforced by TSO, all prerequisite are not be applied for both FCR and aFRR markets. FCR has more requiremnt than aFRR. The following table shows what FCR and aFRR markets support in terms of criteria for the prequalification test. Some criteria need minimum and maximum values to set thresholds for specific criteria.
+
+This table indicates what information is required for each market to tackle realtime dynamic cases while balancing the frequency deviation.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}X|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{2cm}|}
+        \hline
+        \textbf{Criteria} & \textbf{FCR} & \textbf{aFRR} \\
+        \hline
+        Activation Speed & Yes & Yes \\
+        \hline
+        Capacity & Yes & Yes \\
+        \hline
+        Non-LER & Yes & Yes \\
+        \hline
+        Meter Accuracy & Yes & No \\
+        \hline
+        Error Margin & Yes & Yes \\
+        \hline
+        Sampling Time & Yes & Yes \\
+        \hline
+        Central Asset & Yes & No \\
+        \hline
+        Product Type & Yes & Yes \\
+        \hline       
+    \end{tabularx}
+    \caption{Significant Criteria for FCR and aFRR across European countries}
+    \label{tab:criteria2}
+\end{table}
+
+
+

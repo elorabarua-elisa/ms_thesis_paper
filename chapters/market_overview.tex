@@ -1,0 +1,182 @@
+\chapter{Market Overview}
+
+\section{Electricity Market}
+The electricity market refers to the framework where electricity is traded as a commodity, involving various transactions in long-term and short-term marketplaces. Basically, electricity generation, transmission, distribution, and retailing are maintained by market regulator and actors through day-ahead market, intra-day market and balancing markets. This enable stakeholders to manage electricity supply, demand and cost effectively. A standard architecture is designed to ensure the efficient allocation of resources, promote competition to verify robustness of a system, and provide incentives for investment in generation and infrastructure. 
+
+The concept of market needs some powerful authorities to investigate demand, a sustainable plan for seamless supply and distribute responsibilities to different actors and set laws for synchronization in Europe. This indicate a strong system chain amoung power producers, power demands, market operator, system operator, traders, BRP, Flexibility aggregators and consumers. Each of these actors contributes to the overall functioning of the electricity market and keeps a long term plan to ensure stability in business. 
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{electricity_market.png}{%
+        \includegraphics[width=0.8\textwidth]{electricity_market.png}%
+    }{%
+        \IfFileExists{images/electricity_market.png}{%
+            \includegraphics[width=0.8\textwidth]{images/electricity_market.png}
+        }{%
+            \fbox{\parbox{0.75\textwidth}{\centering
+            Image placeholder: add \texttt{electricity\_market.png} either beside \texttt{main.tex} or inside an \texttt{images/} folder.}}
+        }%
+    }
+    \caption{Overview of electricity market actors and interactions}
+    \label{fig:electricity_market}
+\end{figure}
+
+
+Some of the market actors are mentioned below:
+
+1. Power Producers and Portfolios: A resilient elecctricity market relies on a diverse mix of generation technologies to ensure system stability and facilitate the aggressive integration of variable renewable energy. Producers optimize their presence based on the technical charactiristics and marginal costs of their specific assets. 
+The primary types of power producers include: 
+\begin{itemize}
+    \item Conventional Units: This unit includes baseload and dispatchable providers such as coal, natural gas, nuclear plants along with Combined Heat and Power(CHP) units, which provide necessary inertia and reliability to the grid. 
+    \item Renewable Energy Sources: Decarbonization efforts have led to a significant increase in renewable energy sources such as wind, solar, hydroelectric and biomass. These sources are variable and intermittent, requiring careful management and integration into the grid to maintain stability.
+    \item Portfolio Owners: This group includes sophisticated entities managing a strategic mix of conventinal and renewable assets, often distributed across the tranmission netwrork to hedge against localized risks. 
+\end{itemize}
+
+2. Power Demands: Participate as Power Demand actor has become active element of grid and it is a strategic tool to make this process flexible and balanced. By adjusing price signals, consumption-side actors contribute to flattening demand peaks, which reduce system volatility and enhance grid stability. The main types of power demand actors include:
+\begin{itemize}
+    \item Large Consumers: This group includes major inductrial plants where wholesale market is determined as main goal to manage high energy intensity and offer demand-response flexibility.
+    \item Retailers: Retailers act as intermediate market actors or traders who purchase electricity in a large scale from wholesale market. They design business model on reselling this energy to a broad base of small-scale consumers,  including households and small businesses.
+\end{itemize}
+
+3. Market Operator and Regulator: The act is called market governance for market transparency and maximization of social welfare, non-profit and neutral oversight. This is required to stablish a strong governance in a level playing field for all market participants. If this actors are seen in a broader perspective, then:
+\begin{itemize}
+    \item Market Operator: This sub-group focuses on financial administration of the market. They receive all bids and offers, execute the linear optimization and disseminate market prices, volumns and winners. Some popular market operators include EPEX SPOT, Nord Pool etc.
+    \item Regulator: Regulators are another sub-group, monitor market performance for both short-term and long-term planning, enforce policies to prevent market manipulation, and ensure that the market operates in a standard that promote competition, ensure reliablity and protect consumer security.
+\end{itemize}
+
+4. System Operator: A major synchronization is performed by system operators to maintain real-time supply security and system stability as a physical necessity that transends finanial contracts. System operators are the "air traffic controllers" of the grid to ensure the lows of physics which respected across different voltage levels.
+    \begin{itemize}
+    \item Transmission System Operator(TSO): TSO is a key player in the electricity market by managing the high-voltage, meshed trasmission grid. They mainly stabilize whole system and secure supply chain. In Finland, Fingrid manages the transmission system and operates balancing market. On a continental level, ENTSO-E is the association of European TSOs.
+    \item Distribution System Operator (DSO): DSO manages low and mid voltage radial grids that deliver power to end-users. A specific task for a DSO is continuous monitoring of transformer loading to prevent local infrastructure failure. DSOs are promised to ensure reliable grid operation, integrating renewable energy, upgrading networks, investing in smart grid technologies, fostering consumer engagement and facilitating collaboration with local energy companies. 
+    
+    For a safe grid operation, TSO-DSO coordination is essential. In that case, TSO balances the whole system and DSO manages local congestions and grid integrity. 
+\end{itemize}
+
+5. Specialized Market Participants and Emerging Actors: The increasing penetration of renewables necessitates speiclized roles to manage imbalances and provide the flexibility required for a modern grid. 
+    \begin{itemize}
+        \item Balance Responsible Parties (BRPs): A market participant that is financially responsible for ensuring that the same amount of electricity is injected into the national grid as is withdrawn at the connection points for which the participant has balance responsibility. 
+        \item Flexibility Aggregators: These actors cluster smaller, distributed resources such as residential batteries, to participate in wholesale markets as a single, significant block.
+        \item Traders: Market participants who has two different types of trading policies. One is physical trading, where they have a direct impact on the physical flow of electricity such as batteries. The other is financial trading, where they engage in contracts for buy and sell reserve in different markets without directly affecting the physical flow of electricity. Traders oftern utilize Future markets for long-term protection against money inflation with a duration upto 6 years.
+    \end{itemize}
+
+
+\section{Types of Electricity Markets}
+These market actors navigate in three electricity market types named Capacity Market, Energy Market and Ancillary Service Market. The purpose and working principle of each market is given below:
+
+1. Capacity Market: A capacity market is a mechanism in the electricity sector that ensures there will be enough power generation available to meet future demand. In that case, power generators receive incentives for being able to produce fixed amount ofelectricity in allocated time and always ready to supply power when needed - especially during peak demand. Capacity markets typically use forward auctions in short-term(within a few hours or days) or long-term(a year ahead) where power providers commit for resource  availability. Finally, winners receive payments for the obligation of future capacity delivery. The unit of delivered resource is measured in megawatts (MW).
+
+2. Energy Market: The energy market focuses on the trading of electricity as a commodity, where prices are determined by actual electricity production and consumption over time. The unit in measured in megawatt-hours(MWh). It allows participants to buy and sell electricity based on their needs and preferences. Generators earn energy payments for the electricity they actually deliver to the grid. The energy market operates in various timeframes, including day-ahead, intra-day, and real-time markets a.k.a balancing market, allowing participants to adjust their positions based on changing conditions, forecasts and uncertainity of asset's availability.
+
+        2.1. Day-ahead market: The day-ahead market a.k.a spot market allows participants to buy and sell electricity for delivery on the following day, where decision is made one day before the actual delivery, based on forecasts of supply and demand. Additionally, prices are determined through a competitive bidding process for a fixed time span and market operator announce selected capacity providers within short time. This market helps to ensure that there is sufficient capacity available to meet the expected demand for the next day and allows participants to plan their operations accordingly.
+    
+        2.2. Intra-day market: The intra-day market indirectly help elected participants as a second chance to adjust their positions in real-time as conditions change throughout the day. Though a timeframe is determined which started just after the announcement of the day-ahead market winner and continue till predefined time limit before actual delivery in the next day. 
+    
+        2.3. Balancing Market: The balancing market is used to manage imbalances between supply and demand in real-time, ensuring that the grid remains stable and reliable. 
+
+        Each of these markets plays a crucial role in ensuring the efficient operation of the electricity system and facilitating the integration of renewable energy sources. The electricity market is a complex and dynamic system that requires careful management and regulation to ensure its efficient functioning and to meet the evolving needs of consumers and producers. The capacity market, energy market, and ancillary service market work together to ensure that there is sufficient generation capacity, efficient trading of electricity, and reliable support services to maintain the stability of the power grid.
+
+3. Ancillary Services: The ancillary service market is responsible for providing support services that help maintain the stability and reliability of the power grid. These services include frequency regulation, voltage control, and reserve power. The ancillary service market is crucial for ensuring the smooth operation of the electricity system and maintaining the balance between supply and demand in real-time.
+
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{electricity_market_type.png}{%
+        \includegraphics[width=0.8\textwidth]{electricity_market_type.png}%
+    }{%
+        \IfFileExists{images/electricity_market_type.png}{%
+            \includegraphics[width=0.8\textwidth]{images/electricity_market_type.png}
+        }{%
+            \fbox{\parbox{0.75\textwidth}{\centering
+            Image placeholder: add \texttt{electricity\_market\_type.png} either beside \texttt{main.tex} or inside an \texttt{images/} folder.}}
+        }%
+    }
+    \caption{Architecture of different electricity market on type and purpose}
+    \label{fig:electricity_market_type}
+\end{figure}
+
+\section{Ancillary Services}
+Ancillary services play a crutial role as system rescuer when balancing market needs emergency support to stabilize grid and safely operate power system further. These services are catgorized into three major types: 
+
+1. Frequency-supporting services: These category balance between power production and consumption instaneously at 50Hz system frequency. Since frequency imbalance is a global issue such as equipments damage or grid blackout within short time, it requires a active market to provide real-time support. Compare to other categories, frequency-supporting services are utilized more because of increased penetration of renewable energy. Therefore, maintaining system frequency within acceptable limits is crucial for the reliable operation of the power grid. Designing various products would create extremely different technical requirements. There are several popular services traded based on two main geographic location, central Europe and Nordics. 
+
+The main services in all European countries are:
+    \begin{itemize}
+        \item Frequency Containment Reserves (FCR)
+        \item automatic Frequency Restoration Reserves (aFRR)
+        \item manual Frequency Restoration Reserves (mFRR)
+    \end{itemize}
+
+    1.1. Frequency Containment Reserves (FCR): FCR, also known as primary control reserves, are activated automatically and within seconds to recover frequency deviations caused by sudden imbalances between supply and demand. They help to stabilize the system frequency by providing immediate response to frequency changes. However, Nordic countries and Eastern part of Denmark can not relay on general FCR because these area has low-intertia system. Basically, the shift from traditional synchronous gneration(such as nuclear, large thermal plants) to inverter dependent renewable energy resources(such as wind, solar, water) has significantly reduces the retating mass or interia in the Nordic power system. In a low-inertia system, an imbalance drop grid frequency much faster than a high-inertia system. Additionally, renewable energy is highly variable and production never remain in a limited range. A roboust system is required to handle different scenarios seperately and reliably. Thus, this high penetration of renewable energy with high variablity in Nordic region increases the need for sophisticated frequency control strategies and faster response time to maintain grid stability. As a result, Nordics introduce a special services called FCR-N, FCR-D and FFR. Seperate market is designed to prevent high-speed disturbance reserves from being exhausted by minor daily variations. 
+
+        1.1.1. FCR-N: This reserve is also known as FCR for normal operation, a symmetric product used to manage frequent, minor fluctuations within the normal frequency range of 49.9 Hz to 50.1 Hz. Service providers must be capable of providing both upward and downward regulation. 
+
+        1.1.2: FCR-D: FCR-D or FCR for disturbance is an asymmetric product activated during signifiant distrubance when frequency deviation cross normal range. This reserve is further divided into two categories, FCR-D up regulation for frequency drop in range of 49.5 Hz to 49.9 Hz and FCR-D down regulation for frequency rise in range of 50.1 Hz to 50.5 Hz. Service providers get more control on frequency stabilization for certain circumstances. 
+
+        1.1.3: FFR: Fast Frequency Reserve is a special reserve design for rapid response to handle unpredictable low-intertia system. FFR act as a fast support within a second to prevent frequency drop further.
+
+    1.2. automatic Frequency Restoration Reserves (aFRR): aFRR, also known as secondary control reserves, are activated automatically within a few minutes to restore the system frequency to its nominal value after a disturbance. They help to maintain the balance between supply and demand over a longer time frame compared to FCR. Similar equipment setup is required for aFRR as for FCR.
+
+    1.3. manual Frequency Restoration Reserves (mFRR): mFRR, also known as tertiary control reserves, are activated manually by the system operator within a specified time frame (usually 15 minutes) to restore the system frequency and manage larger imbalances. They provide additional support to the system and help to ensure the overall reliability of the power grid. No special equipment setup is required for mFRR.
+
+
+2. Voltage-supporting services: In this category, voltage can be stabilized by controling reactive power supply. This is often a local problem resolved through specific coontract rather than a active market.
+
+3.  Black-start services: This category revive a power system after a blackout and take all initiative to restart system.
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{ancillary_services_architecture.png}{%
+        \includegraphics[width=0.8\textwidth]{ancillary_services_architecture.png}%
+    }{%
+        \IfFileExists{images/ancillary_services_architecture.png}{%
+            \includegraphics[width=0.8\textwidth]{images/ancillary_services_architecture.png}
+        }{%
+            \fbox{\parbox{0.75\textwidth}{\centering
+            Image placeholder: add \texttt{electricity\_market\_type.png} either beside \texttt{main.tex} or inside an \texttt{images/} folder.}}
+        }%
+    }
+    \caption{Architecture of different electricity market on type and purpose}
+    \label{fig:ancillary_services_architecture}
+\end{figure}
+
+
+\section{Auctioning of Ancillary Services}
+An auction is a competitive process where qualified market participants submit bids to provide ancillary services using energy resources they have. Market operator or regulator use auctions to contract a specific volume or capacity at a lowest price. This auctioning process does not offer a fixed price, rather it provide scope for market participants to determine price intelligently through competition. The competition ensure transparency, promote cost effectiveness and provide overview of market dynamics for future business. Auction finanls sign a short or long term agreement and guarantee a revenue stream which facilitate both parties. There is a squential stages of energy auctioning process. They are:
+    \begin{itemize}
+        \item Announcement and Design: The step is conducted by market operator to announce the auction, outlining rules and opportunities, prequalification requirements and timeline. 
+        \item Prequalification: Interested BSP, Aggregators or Traders undergo a prequalification tests following predefined requirements to demonstrate their technical capabilities, financial and legal eligibility to provide the service. After successful tests, they submit documentation on overall process and performance with efficient architectural illustration. This is the approval stage for bidding.
+        \item Bid Submission: Approved participants submit their bids on a fixed date with detailed information about price per megawatt. 
+        \item Bid Evaluation: Bids are assessed by market operator based on predefined criteria. Different countries have variation in evaluation methods and the strategy to win bid in one country never applies to another. 
+        \item Awarding and Contracting: One or multiple bidders can be selected based on evaluation results. Winners sign a contract with market operator for a specific period and affermation of payments either for capacity reserve or realtime energy delivery. It depends on the market type and contract terms.
+        \item Reserve Delivery and Settlement: The final stage is the delivery of contracted services. Participants must provide the agreed-upon ancillary services during the contract period. Market operator monitor performance and settle payments based on contract terms. In case of capacity reserve, payment is made for the availability of the service regardless of whether it is activated or not. In contrast, real-time energy delivery is compensated based on the actual amount of energy delivered when the service is activated. In most countries, penalties are imposed if the participant fails to deliver the contracted service or delay on delivery.
+    \end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{auction.png}{%
+        \includegraphics[width=0.8\textwidth]{auction.png}%
+    }{%
+        \IfFileExists{images/auction.png}{%
+            \includegraphics[width=0.8\textwidth]{images/auction.png}
+        }{%
+            \fbox{\parbox{0.75\textwidth}{\centering
+            Image placeholder: add \texttt{auction.png} either beside \texttt{main.tex} or inside an \texttt{images/} folder.}}
+        }%
+    }
+    \caption{Different stages of auctioning process for ancillary services}
+    \label{fig:auction}
+\end{figure}
+
+
+\section{Emergence of Prequalification Test}
+To manage these ancillary services effectively, system operators procure them through dedicated markets. These markets are regulated by TSO, BSP and BRP to allow efficient allocation of resources and ensure that the necessary reserves are available when needed. TSO disclose strategies and control to bring every BSP in a same platform. This is called reserve market. The Reserve markets for FCR, aFRR, and mFRR are designed to facilitate the procurement process and enable market participants to supply bidded services under governance. Participation in these markets requires the compliance with specific technical and operational requirements, including the installation of appropriate equipment to enable remote monitoring and control. With proper evidence and agreement, participants become BSP or Balance Service Providers for a fixed period. So, strength and safely are the parameters to undergo through Prequalification test before entering into reserve market.
+
+Prequalification is the process that ensures that market participants meet the necessary technical, communication and error handling requirements to provide ancillary services. This process typically involves testing and verification of the participant's capabilities, including their ability to respond to frequency deviations in predefined time windows and provision uninterrupted service. It verifies robousteness of capturing signal and appropriate actions taken by BSP to conduct moderate to critical situations which save national grid from collapsing. In this process, participants need to demonstrate performance under various scenarios, including mimimum and maximum capacity, activation time limit, Capacity, Meter accuracy, Central Asset, Non-LER and Error Margin etc for FCR. In contrast, for aFRR, some significant parameters include Activation time, Capacity, Sampling time, Non-LER and Error Margin etc. 
+
+There is a distinguishable difference between FCR and aFRR prequalification test requirements. Nevertheless, most of the European countries holds similarities in terms of requirements such as activation time, capacity, non-LER, frequency meter accuracy. ENTSO-E and SOGL shows a strong influences on both FCR and aFRR market. In case of activation time, the initial activation to start response following frequency deviation is 2 seconds, 15 seconds is determined to deliver 50\% of the reserve and 30s is the time limit to deliver complete reserve that is promised during auction. Pariticants have to fulfill minimum 1 MW all of the countries, though some of them asked for maximum 25 MW, which will prove another requirement to check resources sustainability. This is called Limited Energy Reservoir. If technical units are not capable of longtime uninterrupted reserve supply, then the service providing group have to sign for extended requirement and setup to overcome the shortcomings. On the other hand, central asset, linearity, error margin and sampling time show a saturated market requirement in each country. Not all TSO provide clear instruction on this significant terms. For example, central asset means frequency meter to measure current frequency of the grid. To install a meter, each TSO instruct different rule based on the whole grid system setup, electricity regulation, supply and demand to extract accurate data. Imposing limitation on how TSO validate result and some extend of flexibility make participants concern about strength and weekness. In that case, service providing group will decide to proceed with TSO where most of the data is available and match requirements.  
+
+
+Some European countries are included in this study and they are divided into three zones based on Prequalification test requirement similarities. Those zones are: Northern, Central Europe and Southern Europe. In Northern zone, countries like Denmark, Baltics are included. In Central zone, countries like Belgium, Germany, Netherlands, Austria, Swizerlands and some other nations are part of it. Lastly countries like Spain, Italy, France are considered as southern zone. Northern zone follow rules and regulations alike Finland. A through observation of requirements to provide ancillary services clearly disclose that Finland has more similarities with Northern zone. For instances, local asset, tests, capacity, error margin etc. are similar across these regions. 
+
+
+\section{Bidding}
+Bidding is the first real communication with TSO before technical test. It is a process where TSO and interested qroup participate to determine price, capacity and penalty for the services. Bidding is a crucial step in the procurement of ancillary services, as it allows market participants to compete for contracts and ensures that the necessary reserves are procured at competitive prices. Also, it shows robustness of a system, controller and technical units to balance sensitivity and reliability. Depends on various market, a date is fixed by TSO, which is confirmed via email or other communication channels to willing participants. In this case, bidders follow some internal strategy or market trend to predict the pricing and bid amount. Some countries have show a balanced pricing and reduce loss if participant doesn't get expected price. On the other hand, some countries can show a unexpected outcome than prediction. The Bidding process typically involves the submission of bids by market participants, which include details such as the price they are willing to accept for providing the service, the capacity they can offer, and any penalties they are willing to accept for non-performance. TSO evaluates the bids based on predefined criteria and selects the winning bids that best meet the system's needs while ensuring cost-effectiveness. The Bidding process helps to ensure that there is sufficient competition in the market and that the necessary reserves are procured at reasonable prices, ultimately contributing to the reliability and stability of the power grid.
+
+\clearpage

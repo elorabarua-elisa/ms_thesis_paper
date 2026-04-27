@@ -1,0 +1,146 @@
+\documentclass[a4paper,12pt]{report}
+ %\usepackage[swedish]{babel} % choose the language
+\usepackage[utf8]{inputenc} % äöå
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, inner=20mm, outer=20mm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{siunitx}
+\usepackage[onehalfspacing]{setspace} 
+\usepackage{mathptmx} % Times New Roman
+\usepackage{tikz} % Support for pictures in latex format -> convert svg files into tikz format at first
+\usepackage{etoolbox} % this one makes a workaround with page numbering possible
+\usepackage{csquotes} % BibLaTex stuff
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{colortbl}
+\usepackage{tikz, pgfplots}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{ltablex}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usetikzlibrary{positioning, matrix, fit, calc, shapes}
+\usepackage{amsmath}
+\pgfplotsset{compat=1.18}
+
+% Global table spacing (smaller padding for all tables)
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.95}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{}{0pt}{\Huge}
+\titlespacing*{\chapter}
+  {0pt}{10pt}{40pt}
+
+\usepackage[%
+	bibstyle=ieee,
+	citestyle=numeric,
+	isbn=true,
+	doi=false,
+	sorting=none,
+	url=true,
+	bibencoding=utf8,
+	backend=bibtex
+	]{biblatex} 
+
+\addbibresource{chapters/referenser.bib} % write your list of references into referenser.bib located in Chapters
+
+% Table of contents
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% ===== Define a preface environment =====
+\newcommand{\prefacename}{Preface}
+\newenvironment{preface}{
+    \vspace*{\stretch{2}}
+    {\noindent \bfseries \Huge \prefacename}
+    \begin{center}
+        % \phantomsection \addcontentsline{toc}{chapter}{\prefacename} % enable this if you want to put the preface in the table of contents
+        \thispagestyle{plain}
+    \end{center}%
+}
+{\vspace*{\stretch{5}}}
+
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
+\begin{document}
+
+\pagestyle{empty}    
+\begingroup
+\patchcmd{\chapter}{plain}{empty}{}{}
+
+%------ Cover page stuff 
+
+\begin{titlepage}
+\vspace*{144pt}
+\begin{center}
+\Huge\bf Certification of European FCR and aFRR Markets %------ NAME OF THE THESIS HERE!!!
+\end{center}
+\enlargethispage{3cm}
+\vfill
+
+\hfill
+\begin{tabular}[t]{l@{}}%{\raggedleft%
+Elora Barua\\
+Master's thesis in Computer Engineering\\ % BAC/MASTER THESIS AND MAIN SUBJECT
+Supervisor: Simon Holmbacka\\ % NAME OF YOUR SUPERVISOR
+Thesis Advisor: Sebastien Lafond\\
+Åbo Akademi University\\
+Faculty of Science and Engineering\\
+Information Technologies\\
+2026\\ % YEAR
+\\
+\\
+\\
+\\
+\end{tabular}
+%}%
+\end{titlepage}
+\begin{abstract}
+     Abstract    \\\\
+    \textbf{Keywords:}
+    keywords
+
+\end{abstract}
+\clearpage
+\begin{preface}
+    some text
+    \newline
+    \newline
+    \newline
+    
+    \today
+\end{preface}
+\clearpage
+%\input{chapters/abstract} 
+
+%\input{chapters/preface} 
+
+%------ end of cover page stuff
+
+\tableofcontents 
+
+\endgroup % end of TeX group
+
+\clearpage
+\pagestyle{plain}      
+\pagenumbering{arabic} % Page numbering starts from here
+
+% Example of structure
+
+\input{chapters/introduction} 
+\input{chapters/market_overview} 
+\input{chapters/certification_requirement} 
+\input{chapters/result} 
+\input{chapters/conclusions}
+
+\nocite{*} %after conclusion 
+\printbibliography[title={References}] % Change the title in the parenthes within the braces if you want
+
+\end{document}
