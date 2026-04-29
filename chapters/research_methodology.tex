@@ -23,6 +23,101 @@ The Certification Tool is designed as a component-driven, interactive web interf
 
 This architecture is built on a modular design pattern and all UI elements are reusable and independent component. It assenbles the system more scalable and maintainable. This diagram shortly explain the overall structure of the web app, which indicate the connection between navigation, visual components.
 
-The first part of the application is navigation layer in header component, which is organized with name and navigation link of different pages. This section is considered as the primary access point for accessing two main functional areas of this application; Home page and Update Information page. The frontend is developed with most popular Next.js framework for smooth transition between views of routes without full page reloads. As a result, the used experience become more promising with clear distinction between analytical functionalities of Home page and data management functionalities of Update Information page. 
+\textbf{Navigation Layer:} The first part of the application is navigation layer in header component, which is organized with name and navigation link of different pages. This section is considered as the primary access point for accessing two main functional areas of this application; Home page and Update Information page. The frontend is developed with most popular Next.js framework for smooth transition between views of routes without full page reloads. As a result, the used experience become more promising with clear distinction between analytical functionalities of Home page and data management functionalities of Update Information page. 
 
-The Home page represent main purpose of the application, which is consist with visual effects and comparison of certification requirements amoung various European countries. A responsive container holds the layout of the Certification Tool as structure to ensure consistent alignment across different screen resolutions. The UI is distinguished into two sections: a European map-based component on the left side and a dynamic information panel on the right side. Both sections are logically dependent because the map is dynamic and interactive, which determine the content of information panel in real time. This architecture is meant to provide a clear and quick overview of technical requireement of active market participants.
+\textbf{Home Page:} The Home page represent main purpose of the application, which is consist with visual effects and comparison of certification requirements amoung various European countries. A responsive container holds the layout of the Certification Tool as structure to ensure consistent alignment across different screen resolutions. The UI is distinguished into two sections: a European map-based component on the left side and a dynamic information panel on the right side. Both sections are logically dependent because the map is dynamic and interactive, which determine the content of information panel in real time. This architecture is meant to provide a clear and quick overview of technical requireement of active market participants.
+
+\textbf{Switch Mode:} A important feature of Home page is functionality of toogle or mode-switching button which allow users to analyse data in details and comparative way. It determine a controlled state variable and display rendered set of components. This function prevent navigation in seperate pages and update the system UI dynamically within same view. By this improvement, interaction and maintainance of context become efficient for users.
+
+\textbf{Individual Mode:} In individual mode, the system disclose all important criteria on single-country level. Additionally, the interactive European map is considered as primary input component. This map is integrated to the system using a geospatial visualization library into React component structure. It is configured with a filtered geographic dataset to display only European countries. Each country is rendered as an interactive SVG element, allowing users to trigger events such as hover and click. This data is stored in the application state to propagate to other components. 
+
+The application state present stored data in a dedicaeated panel, which is dynamically populated in the child component, as the working principle of JavaScript framework. This information details panel is further structured into service-specific views within layout using existing country datasert without reloading the component. Users are allowed to switch between Frequency Containment Reserve (FCR) and automatic Frequency Restoration Reserve (aFRR).
+
+This subsection has two types of data representation to indicate country specific requirement. First parameter is text-based, displayed with label such as activation time, non-LER duration. Another type of quantitive parameters such as capacity and error margin. Quantitive parameters are visualized with a custom static range slider component. The range slider was utilized to indicate minimum and maximum value and a straightforward comparison between the value of FCR and aFRR. The complete UI is developed with smooth transition enhancing user interaction.
+
+\textbf{Group Mode:} This functionality comprised with comparison graph visualization and tabular format to support multiple country for specific items. In this mode, the map is oriented with multiple selection stored as a collection in the application state, which means user can determine countries of interest and identify difference amoung countries easily. User can remove selected country individually or together as their preferences.
+
+The comparison view represent all data in either graphical or tabular representations. Quantitive parameters are visulized using bar chart. Each bar within normalized scale precisely indicate their limit and different colour bring a tranquility across the webpage. This normalization ensures clarity in illustrative graph without distortion caused by extreme values. A React visualization library named "react-simple-map" in offline version is applied to support dynamic data binding in real-time state updates when the selection changes. Simultaneously, the textual parameters are displayed in a structured fact table comprising precise numerical and catagorical information for complementing the visual effects. This dual representation enhances interpretability by combining intuitive visual insights with detailed data accuracy.
+
+
+\textbf{Update Information:}  The data management layer is introduced as a second part of UI component architecture in "Update Information" page. This part is designed receive new or update existing structured data from the user. The interface consist with multiple sections, which are the prequalification test requirement, belongs to a specfic category of certification parameters. The form begins with a auto-suggestion drop down menu for item "Country". A following service-specific input fields receive data for available services of selected country such as FCR-D, FCR-N etc. These fields are grouped logicallyb into activation time, capacity constraints, error margins and other operational requirements.
+
+This form is generated in a way to support multiple services for a country which allow user to update or remove services with new regulations declared from TSO. This is implemented using controlled form components and state arrays, enabling the interface scalability. Additionally, the page supports the inclusion of supplementary resources, such as images, files and external links to provide a comprehensive data management. 
+
+In the final stage, data submission integrate the backend system with frontend and a structed data format is transfered for permanent storage. \newline
+\newline The UI architecture effectively transforms a complex and document style certification requirements into a clear, interactive, structured data for the usecase of business purpose. By integrating map-based selection, dynamic state management and multiple visualization techniques, the Certification Tool become informative with detailed and comparative analysis. The modular design ensures component's independence interaction, supporting future enhancements and integration with backend services.
+
+\subsection{System Architecture}
+
+\subsubsection{System Architecture Overview}
+The Certification Tool is developed following a modern web-based system architecture consist of three-tier client-server model with a layered and modular design approach. Three primary components with different set of rules and technologies construct a complete system. These are Frontend, Backend and Database. Each component is fully depedent on other components and they communicates through pre-defined interfaces. The main purpose of a system architecture is maintainability, scalability and flexibility for future system enhancement or modification.
+
+\begin{itemize}
+    \item Frontend: This layer is known as presentation layer. It handles user interaction and data visualization. Presentation layer focuses on users interest, reduce complexity of layout. This web app is build with Next.js
+    \item Backend: Backend is considered as application logic layer which process requests managing business rules, coordinate dtaa exchange between the frontend and database, provide security and data protection. Backend is developed with python and FastAPI framework.
+    \item Database: The persistence layer is implemented using PostgreSQL to store different types of data in a structured format. It is deployed within a Docker container for quick development without version change, portability and consistency.
+\end{itemize}
+    
+Communication between the frontend and backend occurs via RESTful APIs over HTTP, while the backend interacts with the database using SQLAlchemy as an Object Relational Mapping(ORM) based access layer. As a result, the system maintain transperancy between application logic and database operations.
+
+\begin{figure}[htbp]
+    \centering
+    \IfFileExists{project_structure.png}{%
+        \includegraphics[width=1\textwidth]{project_structure.png}%
+    }{%
+        \IfFileExists{images/project_structure.png}{%
+            \includegraphics[width=1\textwidth]{images/project_structure.png}
+        }{%
+            \fbox{\parbox{0.75\textwidth}{\centering
+            Image placeholder: add \texttt{project\_structure.png} either beside \texttt{main.tex} or inside an \texttt{images/} folder.}}
+        }%
+    }
+    \caption{Diagram of system architecture}
+    \label{fig:project_structure}
+\end{figure}
+
+
+\subsubsection{Architectural Style}
+The client-server architectural style is adopted for the frontend and backend which decoupled and communicate via HTTP requests. Though each component is internally connected, the design allows them for independent development and deployment while ensuring scalability and maintainablity.
+
+The backend untilizes a layered architecture in some ways. It separates responsibilities into routing(controller layer), business logic and data access. Layered design reduce complexities of debugging, testing and excel modularity and finally plan for future extension of the system.
+
+In contrast, frontend follows a component-based architecture for the enhance UI performance. It is divided into reusable components such as map visualization, country information panels and comparison view as well. This design bring a compact solution for efficiency and resuability.
+
+
+\subsubsection{Backend Architecture}
+The backend follows popular system architecture named monolithic architecture. This is a modular design pattern and FastAPI is selected for development. Although deployed as a single application, it it structured into multiple modules where each component is responsible for a specific functionality.
+
+The entry point of the application initialize FastAPI instance, verify and validate middleware configuration such as Cross-Origin Resources Sharing(CORS) and registers API routes. This configuration enables secure communication between the frontend(running on port 3000) and the backend service. 
+
+A significant module name "routes" degine REST API endpoints for managing user requests. The purpose of there endpoints are work as controller, receive HTTP requests, validate input data and return structured JSON responses. The system supports operations such as retrieving country data, inserting new certification information and updating previous data stored in database.
+
+The final stage is database connection layer that manages communication with PostgreSQL. This layer has some specific responsibilities such as loading configuration from environment variables, initializing SQLAlchemy engine and provides session management for executing queries. Ultimately, the system become more consistent and increase roboustness in database opeations.
+
+
+\subsubsection{Database and Containerization}
+For this application, a relational database called PostgreSQL is utilized for storing certification data. PostgreSQL is chosen due to its reliability, support for structured and semi-structured data and more for it's compatibility with SQLAlchemy. 
+
+The database is deployed using Docker and managed through a Docker Compose configuration. The PostgreSQL service runs inside a container, which is exposed on port 5432 and mentioned in docker-compose.yml file. It  allowes the backend application to connect using a defined connection string. Docker ensures consistency for software development, deployment and resolve coinfiguration-related issue in database environment. 
+
+Though SQLAlchemy is not a database system, it provide ORM layer used by backend to intereat with PostgreSQL. So, PostgreSQL port facilitate actual database communication while SQLAlchemy provides an abstraction layer for query execution and schema definition.
+
+\subsubsection{Frontend Architecture}
+A modular structure, that follows modern web development practices, is implemented using Next.js and TypeScript. The frontend of Certification Tool app is distributed and oriented into directories such as "app", "components", "api" and "lib" to serve distinct purposes. 
+
+The "app" directory defines page-level routing to integrate Home page and Update Info page in a same module. The Home page depicts the Europe map, country information panel and conmparison components. On the other hand, the Update Info page provides a form-based interface to insert and modify technical requirement of certification data.
+
+The components directory introduce resuable UI modules categorized by functionality. It has five components serves different purposes named "map", "info", "filter", "comparison" and "layout". The map component renders an user friendly Europe map to support single and multi-country selection simultaneously. The info component displays detailed data used for prequalification test amound selected countries. Both textual values and visual elements such as range sliders are combined for component view. The comparison compoent enables group-level analysis while data is presented through various graph and tabular form. 
+
+For API communication and data transformation purpose, the frontend includes utility modules as well. These utilities process backend responses and convert data into formats suitable for visualization. For instance, map textual constraints into numerical ranges.
+
+\subsubsection{System Interaction Flow}
+A system workflow operates in a structured interaction among frontend, backend and database layers. A user interact the frontend by selecting countries on the map, submitting or modifying data. After this step, the appilication determines whether backend communication is required. 
+
+During data retrieval or modification, the frontend sends an HTTP request to the backend API. The backend processes the request through the routing layer, applies necessary logic to interact with database via SQLAlchemh sessions. The queries are executed in database following SQL language rule and return the generated result from database to backend for further process. The result is retrieved through standard JSON format to frontend as a response toward end user.
+
+The user interface update the received data dynamically and same same process for each request. This final stage is view, which means displaying country-specific prequalification test criteria details, updating comparison charts and reflecting newly inserted data.\newline 
+
+
+
+The Certification Tool represent a well-structured UI architecture with a robust system architecture to effectively manage and visualize prequalification test technical requirements. This discussion explain the working process of component-based frontend design, which enables user interaction through map-based selection, text and range slider based information panels and comparative visualizations among requirements published by TSO. As a result, the tool fulfil important aspects such as maintaining modularity, scalability through strandard architecture. At the system level, the three-tier client-server architecture prove clarity amoung presentation layer, applilcaiton logic and data persistence mechanism through the utilization of popular technologies named Next.js, FastAPI and PostgreSQL. To enhance flexibility, maintainalibility and consistency in pipeline, a modular backend structure and containerzed database is integrated. Ultimately, these architecture generate a scalable and reliable foundation to make the analysis more efficient than a general solution. Besides, the strategy of comparison and maintain essential data across multiple european countries who actively participate in electricity market.
